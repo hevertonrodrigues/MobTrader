@@ -1,0 +1,6 @@
+framework module Pods_MobTrader {
+  umbrella header "Pods-MobTrader-umbrella.h"
+
+  export *
+  module * { export * }
+}
