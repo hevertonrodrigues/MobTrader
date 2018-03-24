@@ -6,10 +6,13 @@ target 'MobTrader' do
   use_frameworks!
 
   # Pods for MobTrader
-  pod 'SlideMenuControllerSwift'
+  pod 'MMDrawerController', '~> 0.5.7'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'NVActivityIndicatorView'
   pod 'Charts'
   pod 'Floaty'
+  pod 'BetterSegmentedControl', '~> 0.9'
+  pod 'ActionSheetPicker-3.0', '~> 2.3.0'
+
 
 end

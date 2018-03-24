@@ -13,6 +13,9 @@
 		0D98F4432064936900F7C13E /* MobTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F4412064936900F7C13E /* MobTrader.xcdatamodeld */; };
 		0D98F4452064936900F7C13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D98F4442064936900F7C13E /* Assets.xcassets */; };
 		0D98F4482064936900F7C13E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98F4462064936900F7C13E /* LaunchScreen.storyboard */; };
+		0DE5074C2065B5D4009B042D /* MyOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */; };
+		0DE5074E2065C9C2009B042D /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074D2065C9C2009B042D /* MenuVC.swift */; };
+		0DE507502065CAF9009B042D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074F2065CAF9009B042D /* Util.swift */; };
 		0DF65E2A2064957D00C7241F /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF65E282064957D00C7241F /* Menu.storyboard */; };
 		0DF65E2D2064958C00C7241F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF65E2B2064958C00C7241F /* Login.storyboard */; };
 		0DF65E342064986200C7241F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF65E332064986200C7241F /* HomeVC.swift */; };
@@ -29,6 +32,9 @@
 		0D98F4442064936900F7C13E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D98F4472064936900F7C13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D98F4492064936900F7C13E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersVC.swift; sourceTree = "<group>"; };
+		0DE5074D2065C9C2009B042D /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		0DE5074F2065CAF9009B042D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		0DF65E292064957D00C7241F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Menu.storyboard; sourceTree = "<group>"; };
 		0DF65E2C2064958C00C7241F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		0DF65E332064986200C7241F /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -72,11 +78,20 @@
 				0D98F43A2064936900F7C13E /* AppDelegate.swift */,
 				0DF65E2F206495BF00C7241F /* Views */,
 				0DF65E322064985100C7241F /* Controllers */,
+				0DE507512065CAFF009B042D /* Utility */,
 				0D98F4442064936900F7C13E /* Assets.xcassets */,
 				0D98F4492064936900F7C13E /* Info.plist */,
 				0D98F4412064936900F7C13E /* MobTrader.xcdatamodeld */,
 			);
 			path = MobTrader;
+			sourceTree = "<group>";
+		};
+		0DE507512065CAFF009B042D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0DE5074F2065CAF9009B042D /* Util.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		0DF65E2F206495BF00C7241F /* Views */ = {
@@ -93,8 +108,10 @@
 		0DF65E322064985100C7241F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0DE5074D2065C9C2009B042D /* MenuVC.swift */,
 				0D98F43C2064936900F7C13E /* LoginVC.swift */,
 				0DF65E332064986200C7241F /* HomeVC.swift */,
+				0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,19 +246,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobTrader/Pods-MobTrader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,7 +279,10 @@
 				0D98F43D2064936900F7C13E /* LoginVC.swift in Sources */,
 				0DF65E342064986200C7241F /* HomeVC.swift in Sources */,
 				0D98F43B2064936900F7C13E /* AppDelegate.swift in Sources */,
+				0DE5074C2065B5D4009B042D /* MyOrdersVC.swift in Sources */,
+				0DE507502065CAF9009B042D /* Util.swift in Sources */,
 				0D98F4432064936900F7C13E /* MobTrader.xcdatamodeld in Sources */,
+				0DE5074E2065C9C2009B042D /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

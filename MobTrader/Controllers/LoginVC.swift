@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SlideMenuControllerSwift
 
 class LoginVC: UIViewController {
 
@@ -22,19 +21,7 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func didClickLoginButton(_ sender: Any) {
-
-        if let appDelegate :AppDelegate = UIApplication.shared.delegate as? AppDelegate {
-            
-            SlideMenuOptions.leftViewWidth = 300
-            SlideMenuOptions.contentViewScale = 1
-            
-            let slideMenuController = SlideMenuController(
-                mainViewController: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!,
-                leftMenuViewController: UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()! )
-            
-            appDelegate.window?.rootViewController = slideMenuController
-        }
-        
+        UIApplication.shared.keyWindow?.rootViewController = Util.sharedInstance.drawerController
     }
     
 }

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SlideMenuControllerSwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char SlideMenuControllerSwiftVersionString[];
+FOUNDATION_EXPORT double BetterSegmentedControlVersionNumber;
+FOUNDATION_EXPORT const unsigned char BetterSegmentedControlVersionString[];
 

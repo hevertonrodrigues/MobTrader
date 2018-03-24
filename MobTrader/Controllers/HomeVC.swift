@@ -37,8 +37,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func didClickOpenMenuButton(_ sender: Any) {
-        self.slideMenuController()?.openLeft()
-
+        Util.sharedInstance.drawerController.toggle(.left, animated: true) { ( success ) in
+        }
     }
     
 }
