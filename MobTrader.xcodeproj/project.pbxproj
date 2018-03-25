@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D949FC82066A4E600B29875 /* TickersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D949FC72066A4E600B29875 /* TickersVC.swift */; };
+		0D949FCA2066A76600B29875 /* TickersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D949FC92066A76600B29875 /* TickersTVC.swift */; };
 		0D98F43B2064936900F7C13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F43A2064936900F7C13E /* AppDelegate.swift */; };
 		0D98F43D2064936900F7C13E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F43C2064936900F7C13E /* LoginVC.swift */; };
 		0D98F4402064936900F7C13E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98F43E2064936900F7C13E /* Main.storyboard */; };
 		0D98F4432064936900F7C13E /* MobTrader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F4412064936900F7C13E /* MobTrader.xcdatamodeld */; };
 		0D98F4452064936900F7C13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D98F4442064936900F7C13E /* Assets.xcassets */; };
 		0D98F4482064936900F7C13E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D98F4462064936900F7C13E /* LaunchScreen.storyboard */; };
+		0DDFC85720682202003BFDDD /* TickerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDFC85620682201003BFDDD /* TickerDetailsVC.swift */; };
 		0DE5074C2065B5D4009B042D /* MyOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */; };
 		0DE5074E2065C9C2009B042D /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074D2065C9C2009B042D /* MenuVC.swift */; };
 		0DE507502065CAF9009B042D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5074F2065CAF9009B042D /* Util.swift */; };
@@ -24,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		0268A5DC0D5AEABA38C2D3B5 /* Pods-MobTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobTrader.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobTrader/Pods-MobTrader.release.xcconfig"; sourceTree = "<group>"; };
+		0D949FC72066A4E600B29875 /* TickersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickersVC.swift; sourceTree = "<group>"; };
+		0D949FC92066A76600B29875 /* TickersTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickersTVC.swift; sourceTree = "<group>"; };
 		0D98F4372064936900F7C13E /* MobTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D98F43A2064936900F7C13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D98F43C2064936900F7C13E /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		0D98F4442064936900F7C13E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D98F4472064936900F7C13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D98F4492064936900F7C13E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DDFC85620682201003BFDDD /* TickerDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerDetailsVC.swift; sourceTree = "<group>"; };
 		0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersVC.swift; sourceTree = "<group>"; };
 		0DE5074D2065C9C2009B042D /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		0DE5074F2065CAF9009B042D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -54,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D949FCB2066A76B00B29875 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D949FC92066A76600B29875 /* TickersTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0D98F42E2064936900F7C13E = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +91,7 @@
 			children = (
 				0D98F43A2064936900F7C13E /* AppDelegate.swift */,
 				0DF65E2F206495BF00C7241F /* Views */,
+				0D949FCB2066A76B00B29875 /* Cells */,
 				0DF65E322064985100C7241F /* Controllers */,
 				0DE507512065CAFF009B042D /* Utility */,
 				0D98F4442064936900F7C13E /* Assets.xcassets */,
@@ -112,6 +127,8 @@
 				0D98F43C2064936900F7C13E /* LoginVC.swift */,
 				0DF65E332064986200C7241F /* HomeVC.swift */,
 				0DE5074B2065B5D4009B042D /* MyOrdersVC.swift */,
+				0D949FC72066A4E600B29875 /* TickersVC.swift */,
+				0DDFC85620682201003BFDDD /* TickerDetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D949FCA2066A76600B29875 /* TickersTVC.swift in Sources */,
+				0D949FC82066A4E600B29875 /* TickersVC.swift in Sources */,
 				0D98F43D2064936900F7C13E /* LoginVC.swift in Sources */,
+				0DDFC85720682202003BFDDD /* TickerDetailsVC.swift in Sources */,
 				0DF65E342064986200C7241F /* HomeVC.swift in Sources */,
 				0D98F43B2064936900F7C13E /* AppDelegate.swift in Sources */,
 				0DE5074C2065B5D4009B042D /* MyOrdersVC.swift in Sources */,

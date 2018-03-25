@@ -17,7 +17,7 @@ class MenuVC: UITableViewController  {
         case 1: //portfolio
             Util.sharedInstance.openController(vc: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController())
         case 2: //tickers
-            print("tickers")
+            Util.sharedInstance.openController(vc: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TickersNavigationIdentifier"))
         case 3: //orders
             Util.sharedInstance.openController(vc: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyOrdersNavigationIdentifier"))
         case 4: //trading
