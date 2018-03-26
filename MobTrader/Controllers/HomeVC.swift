@@ -16,22 +16,25 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartView: PieChartView!
     
+    var itens :[Portfolio] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+        Portfolio.getAll(nil, onSuccess: { (result) in
+            
+            self.itens = result
+            self.setDataCount(
+                data: self.itens,
+                centerText: "Total value",
+                chartView: self.chartView
+            )
+            
+        }) { (error, params) in
+            //Alert de erro
+        }
         
-        self.setDataCount(
-            data: [
-                ["value":Double(10), "label":"BTC", "color":UIColor.randomFlat],
-                ["value":Double(10), "label":"ETH", "color":UIColor.randomFlat],
-                ["value":Double(10), "label":"XRP", "color":UIColor.randomFlat],
-                ["value":Double(20), "label":"ADA", "color":UIColor.randomFlat],
-                ["value":Double(20), "label":"XLM", "color":UIColor.randomFlat]
-            ],
-            centerText: "Total value",
-            chartView: self.chartView
-        )
         
         
     }
@@ -47,21 +50,21 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //Chart Setup
 extension HomeVC {
     
-    func setDataCount(data: [Dictionary<String, Any>], centerText: String, chartView: PieChartView) {
+    func setDataCount(data: [Portfolio], centerText: String, chartView: PieChartView) {
         self.setup(pieChartView: chartView, centerText: centerText)
         
         var entries: [PieChartDataEntry] = []
         var colors: [NSUIColor] = []
         
-        for dict in data {
-            if let value = dict["value"] as? Double, let label = dict["label"] as? String, let color = dict["color"] as? UIColor {
-                entries.append(PieChartDataEntry(value: value,
-                                                 label: label,
+        for item in data {
+//            if let value = dict["value"] as? Double, let label = dict["label"] as? String, let color = dict["color"] as? UIColor {
+                entries.append(PieChartDataEntry(value: item.amount,
+                                                 label: item.name,
                                                   icon: nil)
                 )
 
-                colors.append(color)
-            }
+                colors.append(UIColor.randomFlat)
+//            }
         }
 
         
@@ -137,14 +140,14 @@ extension HomeVC {
 extension HomeVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.itens.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let defaultCell :UITableViewCell = tableView.dequeueReusableCell(withIdentifier:  "HomeCurrencyTableViewCellIdentifier")!// as! UITableViewCell
-//        defaultCell.configure(item: self.clients[indexPath.row])
-        return defaultCell
+        let cell :HomeCurrencyTVC = tableView.dequeueReusableCell(withIdentifier:  "HomeCurrencyTableViewCellIdentifier")! as! HomeCurrencyTVC
+        cell.configure(item: self.itens[indexPath.row])
+        return cell
     }
 
 }
