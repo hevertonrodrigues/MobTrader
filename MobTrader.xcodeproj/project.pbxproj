@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D38168D20684F9C0055C21D /* TickerCandleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38168C20684F9C0055C21D /* TickerCandleCVC.swift */; };
+		0D381690206859730055C21D /* TickerTradeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38168E206859720055C21D /* TickerTradeTVC.swift */; };
+		0D381691206859730055C21D /* TickerOrderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38168F206859720055C21D /* TickerOrderTVC.swift */; };
 		0D949FC82066A4E600B29875 /* TickersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D949FC72066A4E600B29875 /* TickersVC.swift */; };
 		0D949FCA2066A76600B29875 /* TickersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D949FC92066A76600B29875 /* TickersTVC.swift */; };
 		0D98F43B2064936900F7C13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98F43A2064936900F7C13E /* AppDelegate.swift */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		0268A5DC0D5AEABA38C2D3B5 /* Pods-MobTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobTrader.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobTrader/Pods-MobTrader.release.xcconfig"; sourceTree = "<group>"; };
+		0D38168C20684F9C0055C21D /* TickerCandleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerCandleCVC.swift; sourceTree = "<group>"; };
+		0D38168E206859720055C21D /* TickerTradeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerTradeTVC.swift; sourceTree = "<group>"; };
+		0D38168F206859720055C21D /* TickerOrderTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerOrderTVC.swift; sourceTree = "<group>"; };
 		0D949FC72066A4E600B29875 /* TickersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickersVC.swift; sourceTree = "<group>"; };
 		0D949FC92066A76600B29875 /* TickersTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickersTVC.swift; sourceTree = "<group>"; };
 		0D98F4372064936900F7C13E /* MobTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				0D949FC92066A76600B29875 /* TickersTVC.swift */,
+				0D38168C20684F9C0055C21D /* TickerCandleCVC.swift */,
+				0D38168F206859720055C21D /* TickerOrderTVC.swift */,
+				0D38168E206859720055C21D /* TickerTradeTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -295,9 +304,12 @@
 			files = (
 				0D949FCA2066A76600B29875 /* TickersTVC.swift in Sources */,
 				0D949FC82066A4E600B29875 /* TickersVC.swift in Sources */,
+				0D38168D20684F9C0055C21D /* TickerCandleCVC.swift in Sources */,
 				0D98F43D2064936900F7C13E /* LoginVC.swift in Sources */,
+				0D381691206859730055C21D /* TickerOrderTVC.swift in Sources */,
 				0DDFC85720682202003BFDDD /* TickerDetailsVC.swift in Sources */,
 				0DF65E342064986200C7241F /* HomeVC.swift in Sources */,
+				0D381690206859730055C21D /* TickerTradeTVC.swift in Sources */,
 				0D98F43B2064936900F7C13E /* AppDelegate.swift in Sources */,
 				0DE5074C2065B5D4009B042D /* MyOrdersVC.swift in Sources */,
 				0DE507502065CAF9009B042D /* Util.swift in Sources */,

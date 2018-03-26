@@ -17,6 +17,9 @@ class TickerDetailsVC: UIViewController,
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var itens :Int = 200
+    
+    
     
     override func viewDidLoad() {
     }
@@ -28,10 +31,9 @@ class TickerDetailsVC: UIViewController,
 //Tableview
 extension TickerDetailsVC {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView.tag == 1 {
-            return 200
+            return itens
         } else {
             return 3
         }
@@ -39,10 +41,13 @@ extension TickerDetailsVC {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView.tag == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier:  "GreenCell")!
+            let cell :TickerOrderTVC = tableView.dequeueReusableCell(withIdentifier:  "TickerOrderCell")! as! TickerOrderTVC
+            cell.configure(green: ( indexPath.row <= (itens/2) ))
+
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier:  "OrangeCell")!
+            let cell :TickerTradeTVC = tableView.dequeueReusableCell(withIdentifier:  "TickerTradeCell")! as! TickerTradeTVC
+            cell.configure(green:(indexPath.row%3 == 0))
             return cell
         }
     }
@@ -66,12 +71,18 @@ extension TickerDetailsVC {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TickerDetailChartCell",
-                                                          for: indexPath)// as! UICollectionViewCell
+            let cell :TickerCandleCVC = collectionView.dequeueReusableCell(withReuseIdentifier: "TickerDetailChartCell",
+                                                                           for: indexPath) as! TickerCandleCVC
+            cell.configure()
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TickerDetailOrderbookCell",
                                                           for: indexPath)// as! UICollectionViewCell
+            
+            let middleCell = Int((itens/2))
+            
+            (cell.viewWithTag(1) as! UITableView).scrollToRow(at: IndexPath(row: middleCell, section: 0), at: UITableViewScrollPosition.middle, animated: false)
+
             return cell
         }
     }
